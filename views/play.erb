@@ -1,7 +1,17 @@
 <html>
+  <h1> Let the battle commence </h1>
   <h1> <%= @player_1_name %> vs <%= @player_2_name %></h1>
   <ul>
-    <li> <%= @player_1_name %> HP : 100</li>
-    <li> <%= @player_2_name %> HP : 100</li>
+
+    <li>
+      <p> <%= @player_1_name %> HP : 100 </p>
+      <button>Attack <%= @player_2_name %></button>
+    </li>
+
+    <li>
+      <p> <%= @player_2_name %> HP : 100 </p>
+      <button>Attack <%= @player_1_name %></button>
+    </li>
+
   </ul>
 </html>

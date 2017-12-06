@@ -20,5 +20,17 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
+  post '/attack' do
+    def attack
+      puts "#{player_1_name} attacked #{player_2_name}"
+    end
+    attack
+    redirect '/play/attack'
+  end
+
+  get '/play/attack' do
+    erb(:attack)
+  end
+
   run! if app_file == $0
 end
