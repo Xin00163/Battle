@@ -22,13 +22,15 @@ class Battle < Sinatra::Base
 
   post '/attack' do
     def attack
-      puts "#{player_1_name} attacked #{player_2_name}"
+      puts "#{@player_1_name} attacked #{@player_2_name}"
     end
     attack
-    redirect '/play/attack'
+    redirect '/attack'
   end
 
-  get '/play/attack' do
+  get '/attack' do
+    @player_1_name = session["player_1_name"]
+    @player_2_name = session["player_2_name"]
     erb(:attack)
   end
 
