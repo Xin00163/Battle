@@ -4,10 +4,10 @@ feature "Attack" do
     find_button("Attack player_2_name").visible?
   end
 
-  scenario 'player2 attack buttons render after names are entered' do
-    sign_in_and_play
-    find_button("Attack player_1_name").visible?
-  end
+  # scenario 'player2 attack buttons render after names are entered' do
+  #   sign_in_and_play
+  #   find_button("Attack player_1_name").visible?
+  # end
 
   scenario 'player1 attacks player2 and is notified' do
     sign_in_and_play
