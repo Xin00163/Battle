@@ -1,15 +1,15 @@
 <html>
-  <h1> <%= @player_1.name %> attacked <%= @player_2.name %></h1>
+  <h1> <%= @game.player_1.name %> attacked <%= @game.player_2.name %></h1>
   <ul>
 
     <li>
-      <p> <%= @player_1.name %> HP : <%=@player_1.hit_points %> </p>
-      <a href="/attack"><button>Attack <%= @player_2.name %></button></a>
+      <p> <%= @game.player_1.name %> HP : <%=@game.player_1.hit_points %> </p>
+      <a href="/attack"><button>Attack <%= @game.player_2.name %></button></a>
     </li>
 
     <li>
-      <p> <%= @player_2.name %> HP : <%=@player_2.hit_points %> </p>
-      <a href="/attack"><button>Attack <%= @player_1.name %></button></a>
+      <p> <%= @game.player_2.name %> HP : <%=@game.player_2.hit_points %> </p>
+      <a href="/attack"><button>Attack <%= @game.player_1.name %></button></a>
     </li>
 
   </ul>
