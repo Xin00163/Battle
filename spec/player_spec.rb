@@ -11,9 +11,4 @@ describe Player do
     end
   end
 
-  describe "#hitpoints" do
-    it "allows player_1 to reduce the hitpoints of player_2" do
-    expect(player_2_name.hit_points).to eq 90
-    end
-  end
 end

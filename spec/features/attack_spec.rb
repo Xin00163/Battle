@@ -16,4 +16,5 @@ feature "Attack" do
     expect(page).to have_content "player_1_name attacked player_2_name"
   end
 
+  
 end

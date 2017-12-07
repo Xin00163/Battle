@@ -6,11 +6,6 @@ class Player
     @hit_points = 100
   end
 
-  def attack
-    puts "#{@player_1.name} attacked #{@player_2.name}"
-    hit_points
-  end
-
   def hit_points
     @hit_points -= 10
   end
