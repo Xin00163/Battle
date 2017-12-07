@@ -16,10 +16,4 @@ feature "Attack" do
     expect(page).to have_content "player_1_name attacked player_2_name"
   end
 
-  # scenario 'player2 attacks player1 and is notified' do
-  #   sign_in_and_play
-  #   click_button("Attack player_1_name")
-  #   visit '/attack'
-  #   expect(page).to have_content "player_2_name attacked player_1_name"
-  # end
 end
