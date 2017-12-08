@@ -1,20 +1,26 @@
 <html>
-  <h1> <%= @game.player_1.name %> attacked <%= @game.player_2.name %></h1>
+  <h1> Let the battle commence </h1>
+  <h1> <%= @game.player_1.name %> vs <%= @game.player_2.name %></h1>
+  <h1> <%= @game.current_turn.name %>'s turn</h1>
   <ul>
 
     <li>
       <p> <%= @game.player_1.name %> HP : <%=@game.player_1.hit_points %> </p>
-      <a href="/attack"><button>Attack <%= @game.player_2.name %></button></a>
+      <form action = "/attack" method="get">
+        <button type = "submit" value = "<%= @game.player_2.name %>" name = "attack">Attack <%= @game.player_2.name %></button>
+      </form>
     </li>
 
     <li>
       <p> <%= @game.player_2.name %> HP : <%=@game.player_2.hit_points %> </p>
-      <a href="/attack"><button>Attack <%= @game.player_1.name %></button></a>
+      <form action = "/attack" method="get">
+        <button type = "submit" value = "<%= @game.player_1.name %>" name = "attack">Attack <%= @game.player_1.name %></button>
+      </form>
     </li>
 
   </ul>
 
-  <form action = "/play">
-    <input type = "submit" value = "OK">
-  </form>
+  <% if !!@message %>
+    <%= @message %>
+  <% end %>
 </html>

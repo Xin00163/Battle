@@ -20,11 +20,12 @@ class Game
     player.attacked
   end
 
-  def switch_turns
-    @current_turn = opponent_of(current_turn)
-  end
+  # def switch_turns
+  #   @current_turn = opponent_of(current_turn)
+  # end
+  #
+  # def opponent_of(the_current_player)
+  #   @players.select {|player| player != the_current_player}.first
+  # end
 
-  def opponent_of(the_current_player)
-    @players.select {|player| player != the_current_player}.first
-  end
 end
