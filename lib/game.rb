@@ -15,7 +15,7 @@ class Game
   end
 
   def attack(player)
-    player.hit_points
+    player.attacked
   end
 
 end

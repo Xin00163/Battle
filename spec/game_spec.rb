@@ -20,7 +20,7 @@ describe Game do
 
   describe "#attack" do
     it "allows player_1 to reduce the hitpoints of player_2" do
-    expect(game.player_2).to receive(:hit_points)
+    expect(game.player_2).to receive(:attacked)
     game.attack(player_2)
     end
   end
